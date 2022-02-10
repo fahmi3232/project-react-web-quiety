@@ -3,21 +3,6 @@ import { Col, Container, Row, Card } from "react-bootstrap";
 import FadeIn from 'react-fade-in'
 
 const FeaturesSub = () => {
-  const [isVisible, setVisible] = useState(true)
-
-  const domRef = React.useRef()
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => setVisible(entry.isIntersecting))
-    })
-
-    observer.observe(domRef.current)
-
-    return () => observer.unobserve(domRef.current)
-  }, [])
-
-
   const [data, setData] = useState([
     {
       id: 1,
@@ -46,7 +31,7 @@ const FeaturesSub = () => {
   return (
     <div>
       <Container className="features-sub">
-        <Row ref={ domRef } className={ `fade-in-section ${ isVisible ? 'is-visible' : '' }` }>
+        <Row>
           {data.map((dat) => (
             <Col className="ijij" md={4} xs={12}>
               <Card className="crd" style={{ width: "22rem", borderRadius: 10 }}>

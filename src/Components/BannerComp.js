@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from "react";
+import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import banner from "../img/screen/animated-screen-5.svg";
 import client1 from '../img/clients/client-1.svg'
@@ -6,23 +6,10 @@ import client2 from '../img/clients/client-2.svg'
 import client3 from '../img/clients/client-3.svg'
 
 const Home = () => {
-  const [isVisible, setVisible] = useState(true)
-
-  const domRef = React.useRef()
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => setVisible(entry.isIntersecting))
-    })
-
-    observer.observe(domRef.current)
-
-    return () => observer.unobserve(domRef.current)
-  }, [])
   return (
     <div>
       <Container className="home" fluid>
-        <Container ref={ domRef } className={ `fade-in-section ${ isVisible ? 'is-visible' : '' }` }>
+        <Container>
           <Row className="rw">
             <Col md={6}>
               <h1>Business Intelligence & Data Analysis</h1>

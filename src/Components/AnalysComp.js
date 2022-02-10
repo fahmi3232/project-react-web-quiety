@@ -12,21 +12,9 @@ const style = {
 };
 
 const AnalysComp = () => {
-    const [isVisible, setVisible] = useState(true)
-
-    const domRef = React.useRef()
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => setVisible(entry.isIntersecting))
-        })
-
-        observer.observe(domRef.current)
-
-        return () => observer.unobserve(domRef.current)
-    }, [])
+    
   return (
-    <div ref={ domRef } className={ `fade-in-section ${ isVisible ? 'is-visible' : '' }` }>
+    <div>
       <Container className="analys">
         <Row className="rw-anal">
           <Col className="da" md={7} xs={12}>

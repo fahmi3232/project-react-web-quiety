@@ -2,25 +2,11 @@ import React, {useState, useEffect, useRef} from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
 const FeaturesComp = () => {
-  const [isVisible, setVisible] = useState(true)
-
-  const domRef = React.useRef()
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => setVisible(entry.isIntersecting))
-    })
-
-    observer.observe(domRef.current)
-
-    return () => observer.unobserve(domRef.current)
-  }, [])
-
 
   return (
     <div className="features">
       <Container>
-        <Row ref={ domRef } className={ `fade-in-section ${ isVisible ? 'is-visible' : '' }` }>
+        <Row>
           <Col>
             <h5>Build Quality</h5>
             <h1>Our Special Features</h1>

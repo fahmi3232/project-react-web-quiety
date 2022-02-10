@@ -10,24 +10,9 @@ const style={fontSize: 40, backgroundColor: "red", padding: 15, borderRadius: 15
 
 const IncreasingComp = () => {
 
-  const [isVisible, setVisible] = useState(true)
-
-  const domRef = React.useRef()
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => setVisible(entry.isIntersecting))
-    })
-
-    observer.observe(domRef.current)
-
-    return () => observer.unobserve(domRef.current)
-  }, [])
-
-
   return (
     <div>
-      <Container ref={ domRef } className={ `fade-in-section ${ isVisible ? 'is-visible' : '' }` }>
+      <Container>
         <Row className="incre">
           <Col md={6} xs={12} className="da">
               <FontAwesomeIcon style={style}  icon={faShield} />
