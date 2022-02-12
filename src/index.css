@@ -296,6 +296,13 @@ nav.active{
   font-weight: 500;
 }
 
+.news{
+  /* height: 450px; */
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+}
+
 
 
 

@@ -40,6 +40,9 @@ const NavbarComp = () => {
                   <LinkContainer style={{color: "white", paddingLeft: 35}} to='/company'>
                     <Nav.Link>Company</Nav.Link>
                   </LinkContainer>
+                  <LinkContainer style={{color: "white", paddingLeft: 35}} to='/berita'>
+                    <Nav.Link>Berita Hangat</Nav.Link>
+                  </LinkContainer>
                 </Nav>
                 <button className="btn btn-primary">GET STARTED</button>
               </Navbar.Collapse>

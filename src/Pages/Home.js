@@ -6,6 +6,7 @@ import FeaturesSub from '../Components/FeaturesSub';
 import IncreasingComp from '../Components/IncreasingComp';
 import InteractionsComp from '../Components/InteractionsComp';
 import PricingComp from '../Components/PricingComp';
+import FooterComp from '../Components/FooterComp';
 
 const Home = () => {
   return(
@@ -17,6 +18,7 @@ const Home = () => {
       <AnalysComp />
       <InteractionsComp />
       <PricingComp />
+      <FooterComp />
     </div>
   ) 
 };
